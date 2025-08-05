@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Musterboxen bestellen</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 flex justify-center py-10 px-4">
+
+  <section class="bg-white rounded-xl p-6 w-full max-w-[470px] shadow-md">
+    <h2 class="text-center text-xl font-semibold mb-6">Musterboxen bestellen</h2>
+
+    <!-- ALU Box -->
+    <div class="border border-gray-300 rounded-xl pr- pl-4 py-4 mb-4">
+
+      <label class="flex items-center gap-2 text-lg font-semibold mb-3">
+        <input type="checkbox" id="aluBox" class="accent-green-500 w-5 h-5" />
+        <span>ALU-Musterbox</span>
+      </label>
+
+      <ul class="space-y-3">
+        <li class="flex items-center gap-3">
+  <img src="Bilder/Alu_Classic_Matt.jpg" alt="Alu Classic Matt" class="w-[48px] h-[32px] object-cover" />
+  <div class="flex items-center gap-0.5 flex-wrap">
+    <span class="font-semibold whitespace-nowrap">2× Alu – Classic Matt (3mm)</span>
+    <div class="flex items-center gap-2 ml-2">
+      <img src="Bilder/info-icon.png" alt="Info" class="w-4 h-4" />
+      <span class="text-xs bg-gray-100 text-gray-800 px-2 py-0.5 rounded">günstig</span>
+    </div>
+  </div>
+</li>
+
+
+        <li class="flex items-center gap-3">
+          <img src="Bilder/AluPrime_Lotus_Seidenmatt.jpg" alt="Lotus Seidenmatt" class="w-[48px] h-[32px] object-cover" />
+          <div class="flex-1 flex items-center gap-2">
+            <span class="font-semibold whitespace-nowrap">2× ALU Prime – <span class="font-light">Lotus Seidenmatt</span></span>
+            <img src="Bilder/info-icon.png" alt="Info" class="w-4 h-4" />
+            <span class="text-xs bg-red-500 text-white px-2 py-0.5 rounded ml-0.2">Topseller</span>
+
+          </div>
+        </li>
+
+        <li class="flex items-center gap-3">
+          <img src="Bilder/Alu_Prime_HD_Glanz.jpg" alt="HD Glanz" class="w-[48px] h-[32px] object-cover" />
+          <div class="flex-1 flex items-center gap-2">
+            <span class="font-semibold">2× ALU Prime – HD Glanz</span>
+            <img src="Bilder/info-icon.png" alt="Info" class="w-4 h-4" />
+          </div>
+        </li>
+
+        <li class="flex items-center gap-3">
+          <img src="Bilder/AluPrime_Metall_Gebürstet.jpg" alt="Metall Gebürstet" class="w-[48px] h-[32px] object-cover" />
+          <div class="flex-1 flex items-center gap-2">
+            <span class="font-semibold">2× ALU Prime – Metall Gebürstet</span>
+            <img src="Bilder/info-icon.png" alt="Info" class="w-4 h-4" />
+          </div>
+        </li>
+
+        <li class="flex items-center gap-3">
+          <img src="Bilder/Acryl_Classic.jpg" alt="Acryl Classic" class="w-[48px] h-[32px] object-cover" />
+          <div class="flex-1 flex items-center gap-2">
+            <span class="font-semibold">2× Acryl – Classic</span>
+            <img src="Bilder/info-icon.png" alt="Info" class="w-4 h-4" />
+          </div>
+        </li>
+      </ul>
+
+      <p class="text-sm text-gray-400 mt-2">Mehr ansehen</p>
+    </div>
+
+    <!-- GLASS Box -->
+    <div class="border border-gray-300 rounded-xl p-4 mb-6">
+      <label class="flex items-center gap-2 text-lg font-semibold mb-3">
+        <input type="checkbox" id="glassBox" class="accent-green-500 w-5 h-5" />
+        <span>GLASS-Musterbox</span>
+      </label>
+
+      <ul class="space-y-3">
+        <li class="flex items-center gap-3">
+          <img src="Bilder/Super_Solid_Glass_Glanz.jpg" alt="Glanz" class="w-[48px] h-[32px] object-cover" />
+          <div class="flex-1 flex items-center gap-2">
+            <span class="font-semibold">3× Super Solid Glass – Glanz</span>
+            <img src="Bilder/info-icon.png" alt="Info" class="w-4 h-4" />
+            <span class="text-xs bg-gray-800 text-white px-2 py-0.5 rounded">Signatur</span>
+          </div>
+        </li>
+
+        <li class="flex items-center gap-3">
+          <img src="Bilder/Super_Solid_Glass_Satinmatt.jpg" alt="Satinmatt" class="w-[48px] h-[32px] object-cover" />
+          <div class="flex-1 flex items-center gap-2">
+            <span class="font-semibold">2× Super Solid Glass – Satin</span>
+            <img src="Bilder/info-icon.png" alt="Info" class="w-4 h-4" />
+          </div>
+        </li>
+      </ul>
+
+      <p class="text-sm text-gray-400 mt-2">Mehr ansehen</p>
+    </div>
+
+    <!-- Erfolgsmeldung -->
+    <p id="successMessage" class="hidden text-sm text-green-600 font-medium mb-3 text-center">
+      ✅ Musterbox wurde zum Warenkorb hinzugefügt
+    </p>
+
+    <!-- Button -->
+    <button
+  onclick="addToCart()"
+  class="w-full text-green-600 font-bold text-sm rounded-[6px] py-3 border border-green-600 bg-white shadow-[0_0_8px_1px_rgba(34,197,94,0.2)] hover:bg-green-600 hover:text-white transition-colors duration-200"
+>
+  Musterbox in den Warenkorb
+</button>
+
+  </section>
+
+  <!-- JS: Simple Logic -->
+  <script>
+    function addToCart() {
+      const aluBox = document.getElementById('aluBox').checked;
+      const glassBox = document.getElementById('glassBox').checked;
+      const msg = document.getElementById('successMessage');
+
+      if (aluBox || glassBox) {
+        msg.classList.remove('hidden');
+      } else {
+        msg.classList.add('hidden');
+        alert('Bitte wähle mindestens eine Musterbox aus.');
+      }
+    }
+  </script>
+</body>
+</html>
